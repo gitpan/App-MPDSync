@@ -1,0 +1,13 @@
+Build.PL
+Changes
+LICENSE
+MANIFEST
+META.json
+META.yml
+README
+cpanfile
+dist.ini
+lib/App/MPDSync.pm
+script/mpd-sync
+t/basic.t
+t/release-pod-syntax.t
