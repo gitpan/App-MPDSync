@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use 5.010;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Getopt::Long;
 use Net::MPD;
@@ -137,12 +137,25 @@ App::MPDSync - Synchronize MPD with another instance
 
 =head1 SYNOPSIS
 
-  > mpdsync --from otherhost --to localhost
+  mpd-sync --from otherhost --to localhost
 
 =head1 DESCRIPTION
 
 C<App::MPDSync> will keep an instance of C<MPD> synced with another instance.
 This can be useful for having failover for an online radio station.
+
+=head1 REQUIREMENTS
+
+Both MPD instances have to have the exact same files in their libraries or the
+destination server will get out of sync since it will not be able to play some
+of the files from the source server.
+
+Specifying the same server for both the source and the destination will simply
+stop C<MPD> and clear the playlist.
+
+If another program modifies the playlist of the destination server, C<mpd-sync>
+will not try to fix this until it is restarted.  As such, the servers will then
+be out of sync.
 
 =head1 AUTHOR
 
@@ -154,8 +167,23 @@ Copyright 2014 Alan Berndt
 
 =head1 LICENSE
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 =head1 SEE ALSO
 

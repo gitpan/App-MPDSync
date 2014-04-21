@@ -4,9 +4,9 @@
       "Alan Berndt <alan@eatabrick.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Milla version v1.0.4, Dist::Zilla version 4.300037, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Milla version v1.0.4, Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.120921",
    "license" : [
-      "perl_5"
+      "mit"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -49,6 +49,17 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.01"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/bentglasstube/App-MPDSync/issues"
+      },
+      "homepage" : "https://github.com/bentglasstube/App-MPDSync",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/bentglasstube/App-MPDSync.git",
+         "web" : "https://github.com/bentglasstube/App-MPDSync"
+      }
+   },
+   "version" : "0.02"
 }
 

@@ -7,8 +7,8 @@ build_requires:
 configure_requires:
   Module::Build::Tiny: 0.035
 dynamic_config: 0
-generated_by: 'Dist::Milla version v1.0.4, Dist::Zilla version 4.300037, CPAN::Meta::Converter version 2.120921'
-license: perl
+generated_by: 'Dist::Milla version v1.0.4, Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.120921'
+license: mit
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -26,4 +26,8 @@ requires:
   Net::MPD: 0
   Proc::Daemon: 0
   perl: 5.010
-version: 0.01
+resources:
+  bugtracker: https://github.com/bentglasstube/App-MPDSync/issues
+  homepage: https://github.com/bentglasstube/App-MPDSync
+  repository: https://github.com/bentglasstube/App-MPDSync.git
+version: 0.02
